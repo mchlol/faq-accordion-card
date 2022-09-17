@@ -1,15 +1,6 @@
-// default
-.attribution {
-    font-size: 11px;
-    text-align: center;
-}
-
-.attribution a {
-    color: hsl(228, 45%, 44%);
-}
-
 // import font
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
 
 // ## custom variables
 
@@ -30,4 +21,67 @@ body {
     font-size: 12px;
     font-family: $kumbh-sans;
     font-weight: 400;
+    color: $darkBlue;
+    background: linear-gradient(180deg, $softViolet, $softBlue) no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.content-wrap {
+    width: 80%;
+    margin: 2em auto;
+    background-color: #fff;
+    border: none;
+    border-radius: 15px;
+}
+
+header {
+    text-align: center;
+}
+
+.img-wrap {
+    width: 100%;
+    object-fit: cover;
+}
+
+.faq-wrap {
+    margin: 1em;
+}
+
+// ## Accordion 
+
+.accordion-wrap {
+    margin: 1em;
+}
+
+.accordion-button {
+    background-color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid $divider;
+    // outline: none;
+    transition: 0.4s;
+}
+
+
+.accordion-body {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion-button:after {
+    content: url(./images/icon-arrow-down.svg);
+    font-size: 13px;
+    color: $softRed;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    transform: rotate(180deg);
 }

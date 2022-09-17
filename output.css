@@ -1,17 +1,67 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: hsl(228deg, 45%, 44%);
-}
-
 body {
   font-size: 12px;
   font-family: "Kumbh Sans", sans-serif;
   font-weight: 400;
+  color: hsl(238deg, 29%, 16%);
+  background: linear-gradient(180deg, hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%)) no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.content-wrap {
+  width: 80%;
+  margin: 2em auto;
+  background-color: #fff;
+  border: none;
+  border-radius: 15px;
+}
+
+header {
+  text-align: center;
+}
+
+.img-wrap {
+  width: 100%;
+  object-fit: cover;
+}
+
+.faq-wrap {
+  margin: 1em;
+}
+
+.accordion-wrap {
+  margin: 1em;
+}
+
+.accordion-button {
+  background-color: #fff;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  border-bottom: 1px solid hsl(240deg, 5%, 91%);
+  transition: 0.4s;
+}
+
+.accordion-body {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion-button:after {
+  content: url(./images/icon-arrow-down.svg);
+  font-size: 13px;
+  color: hsl(14deg, 88%, 65%);
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  transform: rotate(180deg);
 }
 
 /*# sourceMappingURL=output.css.map */

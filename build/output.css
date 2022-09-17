@@ -1,0 +1,19 @@
+/* Error: Can't find stylesheet to import.
+ *    ,
+ * 13 | @import "bootstrap";
+ *    |         ^^^^^^^^^^^
+ *    '
+ *   input.scss 13:9  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a    \2577 \a 13 \2502  @import \"bootstrap\";\a    \2502          ^^^^^^^^^^^\a    \2575 \a   input.scss 13:9  root stylesheet";
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL291dHB1dC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7O3VDQUt1Qzs7QUFFdkM7RUFDRTs2Q0FDMkM7RUFDM0MsZ0JBQWdCO0VBQ2hCLGNBQWM7RUFDZCxZQUFZO0VBQ1osa0JBQWtCO0VBQ2xCLDhCQUE4QjtFQUM5QixrTEFBa0w7QUFDcEwiLCJmaWxlIjoib3V0cHV0LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIEVycm9yOiBDYW4ndCBmaW5kIHN0eWxlc2hlZXQgdG8gaW1wb3J0LlxuICogICAgLFxuICogMTMgfCBAaW1wb3J0IFwiYm9vdHN0cmFwXCI7XG4gKiAgICB8ICAgICAgICAgXl5eXl5eXl5eXl5cbiAqICAgICdcbiAqICAgaW5wdXQuc2NzcyAxMzo5ICByb290IHN0eWxlc2hlZXQgKi9cblxuYm9keTo6YmVmb3JlIHtcbiAgZm9udC1mYW1pbHk6IFwiU291cmNlIENvZGUgUHJvXCIsIFwiU0YgTW9ub1wiLCBNb25hY28sIEluY29uc29sYXRhLCBcIkZpcmEgTW9ub1wiLFxuICAgICAgXCJEcm9pZCBTYW5zIE1vbm9cIiwgbW9ub3NwYWNlLCBtb25vc3BhY2U7XG4gIHdoaXRlLXNwYWNlOiBwcmU7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBwYWRkaW5nOiAxZW07XG4gIG1hcmdpbi1ib3R0b206IDFlbTtcbiAgYm9yZGVyLWJvdHRvbTogMnB4IHNvbGlkIGJsYWNrO1xuICBjb250ZW50OiBcIkVycm9yOiBDYW4ndCBmaW5kIHN0eWxlc2hlZXQgdG8gaW1wb3J0LlxcYSAgICBcXDI1NzcgXFxhIDEzIFxcMjUwMiAgQGltcG9ydCBcXFwiYm9vdHN0cmFwXFxcIjtcXGEgICAgXFwyNTAyICAgICAgICAgIF5eXl5eXl5eXl5eXFxhICAgIFxcMjU3NSBcXGEgICBpbnB1dC5zY3NzIDEzOjkgIHJvb3Qgc3R5bGVzaGVldFwiO1xufVxuIl19 */
