@@ -6,43 +6,79 @@ body {
   color: hsl(238deg, 29%, 16%);
   background: linear-gradient(180deg, hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%)) no-repeat;
   background-size: cover;
-  height: 100vh;
+}
+
+.page-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  position: relative;
+  padding: 1em;
+  min-height: 100vh;
 }
 
 .content-wrap {
+  position: relative;
   width: 80%;
-  margin: 2em auto;
-  background-color: #fff;
-  border: none;
-  border-radius: 15px;
+  padding: 2em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+@media only screen and (min-width: 600px) {
+  .content-wrap {
+    width: 40em;
+  }
+}
 header {
   text-align: center;
 }
 
 .img-wrap {
-  width: 100%;
+  position: relative;
+  transform: translate(0, 3em);
+  width: 60%;
   object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-hero {
+  z-index: 2;
+  display: block;
+  margin-bottom: 2em;
+}
+
+.img-hero-bg {
+  z-index: 1;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  width: 100%;
+  top: 13em;
 }
 
 .faq-wrap {
-  margin: 1em;
-}
-
-.accordion-wrap {
-  margin: 1em;
+  background-color: #fff;
+  border-radius: 25px;
+  padding-top: 2em;
+  overflow: hidden;
 }
 
 .accordion-button {
   background-color: #fff;
   cursor: pointer;
-  padding: 18px;
+  padding: 1.5em;
   width: 100%;
   text-align: left;
   border: none;
   border-bottom: 1px solid hsl(240deg, 5%, 91%);
   transition: 0.4s;
+}
+
+.accordion-button:hover {
+  color: hsl(14deg, 88%, 65%);
 }
 
 .accordion-body {
@@ -62,6 +98,14 @@ header {
 
 .active:after {
   transform: rotate(180deg);
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  height: 50px;
+  position: relative;
+  padding: 1em 0;
 }
 
 /*# sourceMappingURL=output.css.map */
