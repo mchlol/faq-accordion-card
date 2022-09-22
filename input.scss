@@ -19,8 +19,14 @@ $darkGreyBlue: hsl(240, 6%, 50%);
 $softViolet: hsl(273, 75%, 66%);
 $softBlue: hsl(240, 73%, 65%);
 
+
 $divider: hsl(240, 5%, 91%);
 
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
 body {
     font-size: 12px;
@@ -35,37 +41,30 @@ a {
     text-decoration: none;
 }
 
+.pad-1 {
+    padding: 1em;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
 .page-container {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
     position: relative;
-    padding: 1em;
+    padding: 2em;
     min-height: 100vh;
 }
 
 .content-wrap {
-    padding: 2em;
     position: relative;
-    // min-width: 270px;
     max-width: 350px;
     margin-left: auto;
     margin-right: auto;
 }
 
-@media only screen and (min-width: 800px) {
-
-    .content-wrap {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .img-wrap,
-    .faq-wrap {
-        min-width: 270px;
-    }
-}
 
 header {
     text-align: center;
@@ -73,9 +72,11 @@ header {
 
 .img-wrap {
     position: relative;
-    transform: translate(0, 3em);
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     object-fit: cover;
+    z-index: 2;
+    transform: translateY(1.5em);
 }
 
 .img-hero {
@@ -87,17 +88,18 @@ header {
     display: block;
     position: absolute;
     width: 100%;
-    top: 6em;
+    top: 10em;
 }
 
 .faq-wrap {
     width: 100%;
     background-color: #fff;
     border-radius: 25px;
-    padding-top: 2em;
     overflow: hidden;
+    transform: translateY(-90px);
+    padding: 10em 1em 4em 1em;
+    box-shadow: 0px 18px 42px hsl(240deg 70% 20% / 50%);
 }
-
 
 // ## Accordion 
 
@@ -109,20 +111,27 @@ header {
     width: 100%;
     text-align: left;
     border: none;
-    border-bottom: 1px solid $divider;
-    transition: 0.4s;
+    // transition: 0.4s;
 }
 
 .accordion-button:hover {
     color: $softRed;
 }
 
+.bold {
+    font-weight: 700;
+}
 
 .accordion-body {
     padding: 0 18px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+    width: 100%;
+
+    p {
+        padding-bottom: 1.5em;
+    }
 }
 
 .accordion-button:after {
@@ -131,6 +140,13 @@ header {
     color: $softRed;
     float: right;
     margin-left: 5px;
+}
+
+hr {
+    border-bottom: 1px solid $divider;
+    opacity: 0.25;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .active:after {
@@ -147,5 +163,21 @@ footer {
 
     a {
         color: $softRed;
+    }
+}
+
+// ## media queries
+
+@media only screen and (min-width: 800px) {
+
+    .content-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-wrap,
+    .faq-wrap {
+        min-width: 270px;
     }
 }

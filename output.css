@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   font-size: 12px;
   font-family: "Kumbh Sans", sans-serif;
@@ -12,43 +18,41 @@ a {
   text-decoration: none;
 }
 
+.pad-1 {
+  padding: 1em;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
 .page-container {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
   position: relative;
-  padding: 1em;
+  padding: 2em;
   min-height: 100vh;
 }
 
 .content-wrap {
-  padding: 2em;
   position: relative;
   max-width: 350px;
   margin-left: auto;
   margin-right: auto;
 }
 
-@media only screen and (min-width: 800px) {
-  .content-wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .img-wrap,
-.faq-wrap {
-    min-width: 270px;
-  }
-}
 header {
   text-align: center;
 }
 
 .img-wrap {
   position: relative;
-  transform: translate(0, 3em);
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   object-fit: cover;
+  z-index: 2;
+  transform: translateY(1.5em);
 }
 
 .img-hero {
@@ -60,15 +64,17 @@ header {
   display: block;
   position: absolute;
   width: 100%;
-  top: 6em;
+  top: 10em;
 }
 
 .faq-wrap {
   width: 100%;
   background-color: #fff;
   border-radius: 25px;
-  padding-top: 2em;
   overflow: hidden;
+  transform: translateY(-90px);
+  padding: 10em 1em 4em 1em;
+  box-shadow: 0px 18px 42px hsla(240deg, 70%, 20%, 0.5);
 }
 
 .accordion-button {
@@ -78,12 +84,14 @@ header {
   width: 100%;
   text-align: left;
   border: none;
-  border-bottom: 1px solid hsl(240deg, 5%, 91%);
-  transition: 0.4s;
 }
 
 .accordion-button:hover {
   color: hsl(14deg, 88%, 65%);
+}
+
+.bold {
+  font-weight: 700;
 }
 
 .accordion-body {
@@ -91,6 +99,10 @@ header {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+  width: 100%;
+}
+.accordion-body p {
+  padding-bottom: 1.5em;
 }
 
 .accordion-button:after {
@@ -99,6 +111,13 @@ header {
   color: hsl(14deg, 88%, 65%);
   float: right;
   margin-left: 5px;
+}
+
+hr {
+  border-bottom: 1px solid hsl(240deg, 5%, 91%);
+  opacity: 0.25;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .active:after {
@@ -115,6 +134,18 @@ footer {
 }
 footer a {
   color: hsl(14deg, 88%, 65%);
+}
+
+@media only screen and (min-width: 800px) {
+  .content-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .img-wrap,
+.faq-wrap {
+    min-width: 270px;
+  }
 }
 
 /*# sourceMappingURL=output.css.map */
