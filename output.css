@@ -8,6 +8,10 @@ body {
   background-size: cover;
 }
 
+a {
+  text-decoration: none;
+}
+
 .page-container {
   display: flex;
   flex-flow: column nowrap;
@@ -18,16 +22,22 @@ body {
 }
 
 .content-wrap {
-  position: relative;
-  width: 80%;
   padding: 2em;
+  position: relative;
+  max-width: 350px;
   margin-left: auto;
   margin-right: auto;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
   .content-wrap {
-    width: 40em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .img-wrap,
+.faq-wrap {
+    min-width: 270px;
   }
 }
 header {
@@ -37,29 +47,24 @@ header {
 .img-wrap {
   position: relative;
   transform: translate(0, 3em);
-  width: 60%;
+  width: 100%;
   object-fit: cover;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .img-hero {
-  z-index: 2;
   display: block;
   margin-bottom: 2em;
 }
 
 .img-hero-bg {
-  z-index: 1;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   position: absolute;
   width: 100%;
-  top: 13em;
+  top: 6em;
 }
 
 .faq-wrap {
+  width: 100%;
   background-color: #fff;
   border-radius: 25px;
   padding-top: 2em;
@@ -106,6 +111,10 @@ footer {
   height: 50px;
   position: relative;
   padding: 1em 0;
+  color: hsl(238deg, 29%, 16%);
+}
+footer a {
+  color: hsl(14deg, 88%, 65%);
 }
 
 /*# sourceMappingURL=output.css.map */
