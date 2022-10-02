@@ -39,6 +39,14 @@ h1 {
   max-width: 350px;
   margin-left: auto;
   margin-right: auto;
+  border: 1px solid red;
+  background: url(./images/bg-pattern-desktop.svg);
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: -100px 25px;
+  background-size: 400px;
+  box-shadow: 0px 18px 42px hsla(240deg, 70%, 20%, 0.5);
+  border-radius: 25px;
 }
 
 header {
@@ -60,7 +68,8 @@ header {
   margin-bottom: 2em;
 }
 
-.img-hero-desktop {
+.img-hero-desktop,
+.img-hero-box {
   display: none;
 }
 
@@ -73,12 +82,10 @@ header {
 
 .faq-wrap {
   width: 100%;
-  background-color: #fff;
-  border-radius: 25px;
+  border: 1px solid blue;
   overflow: hidden;
   transform: translateY(-90px);
   padding: 10em 1em 4em 1em;
-  box-shadow: 0px 18px 42px hsla(240deg, 70%, 20%, 0.5);
 }
 
 .accordion-button {
@@ -131,16 +138,14 @@ hr {
 footer {
   text-align: center;
   font-size: 0.8rem;
-  height: 50px;
   position: relative;
-  padding: 1em 0;
   color: hsl(238deg, 29%, 16%);
 }
 footer a {
   color: hsl(14deg, 88%, 65%);
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
   .page-container {
     align-items: center;
     justify-content: center;
@@ -149,36 +154,39 @@ footer a {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: none;
+    max-width: 800px;
   }
   .img-wrap {
-    position: absolute;
     width: 400px;
     margin: 0 auto;
-    transform: translateX(-400px);
-  }
-  .faq-wrap {
     transform: none;
-    padding: 4em 4em 4em 25em;
-    background: url(./images/bg-pattern-desktop.svg);
-    background-color: #fff;
-    background-repeat: no-repeat;
-    background-position: -50% 0;
-    background-size: contain;
-    max-width: 75%;
   }
   .img-hero-bg {
     display: none;
   }
-  .img-hero-desktop {
+  .img-hero-desktop,
+.img-hero-box {
     display: block;
+  }
+  .img-hero-box {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
   .img-hero-mobile {
     display: none;
   }
+  .faq-wrap {
+    transform: none;
+    padding: 3em;
+  }
   header {
     text-align: left;
     padding: 1.5em;
+  }
+  footer {
+    height: 50px;
+    padding: 1em 0;
   }
 }
 
