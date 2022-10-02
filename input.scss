@@ -54,20 +54,17 @@ h1 {
     flex-flow: column nowrap;
     justify-content: space-between;
     position: relative;
-    min-height: 100vh;
+    margin-top: 3em;
+    min-height: calc(100vh - 3em);
 }
 
 .content-wrap {
     position: relative;
     max-width: 350px;
+    margin-top: 10em;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid red;
-    background: url(./images/bg-pattern-desktop.svg);
     background-color: #fff;
-    background-repeat: no-repeat;
-    background-position: -100px 25px;
-    background-size: 400px;
     box-shadow: 0px 18px 42px hsl(240deg 70% 20% / 50%);
     border-radius: 25px;
 }
@@ -79,12 +76,12 @@ header {
 }
 
 .img-wrap {
-    position: relative;
+    position: absolute;
     width: 80%;
-    margin: 0 auto;
+    margin: 2em 3em;
     object-fit: cover;
     z-index: 2;
-    transform: translateY(1.5em);
+    transform: translateY(-12em);
 }
 
 .img-hero {
@@ -97,7 +94,7 @@ header {
     display: none;
 }
 
-.img-hero-bg {
+.img-hero-shadow {
     display: block;
     position: absolute;
     width: 100%;
@@ -106,10 +103,8 @@ header {
 
 .faq-wrap {
     width: 100%;
-    border: 1px solid blue;
     overflow: hidden;
-    transform: translateY(-90px);
-    padding: 10em 1em 4em 1em;
+    padding: 10em 1em 2em 1em;
 }
 
 // ## Accordion 
@@ -179,6 +174,15 @@ footer {
 
 // ## MEDIA QUERIES ##
 
+// @media screen and (max-width: 999px) {
+//     .content-wrap {
+//         display: flex;
+//         flex-flow: column nowrap;
+//         justify-content: space-between;
+//         align-items: center;
+//     }
+// }
+
 @media only screen and (min-width: 1000px) {
 
     .page-container {
@@ -190,18 +194,32 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: 800px;
+        max-width: 850px;
+        height: auto;
+        background: url(./images/bg-pattern-desktop.svg), #fff;
+        background-repeat: no-repeat;
+        background-position: left -425px bottom -100px;
+        background-size: 750px;
     }
 
     .img-wrap {
-        // position: absolute;
+        position: relative;
         width: 400px;
         margin: 0 auto;
         transform: none;
     }
 
-    .img-hero-bg {
+    .img-hero-shadow {
         display: none;
+    }
+
+    .desktop-img-wrap {
+        background: url(./images/illustration-woman-online-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left -85px bottom 0px;
+        width: 475px;
+        height: 310px;
     }
 
     .img-hero-desktop,
@@ -209,10 +227,16 @@ footer {
         display: block;
     }
 
+    .img-hero-desktop {
+        width: 475px;
+    }
+
     .img-hero-box {
         position: absolute;
-        top: 0;
-        left: 0;
+        width: 150px;
+        top: 125px;
+        left: -100px;
+        filter: drop-shadow(0px 18px 10px hsl(180deg 70% 20% / 50%));
     }
 
     .img-hero-mobile {
@@ -221,7 +245,7 @@ footer {
 
     .faq-wrap {
         transform: none;
-        padding: 3em;
+        padding: 4em 3em 6em 1em;
     }
 
     header {
