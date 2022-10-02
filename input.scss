@@ -61,7 +61,7 @@ h1 {
 .content-wrap {
     position: relative;
     max-width: 350px;
-    margin-top: 10em;
+    margin-top: 9em;
     margin-left: auto;
     margin-right: auto;
     background-color: #fff;
@@ -77,8 +77,8 @@ header {
 
 .img-wrap {
     position: absolute;
-    width: 80%;
-    margin: 2em 3em;
+    width: 73%;
+    margin: 2em 4em;
     object-fit: cover;
     z-index: 2;
     transform: translateY(-12em);
@@ -104,7 +104,7 @@ header {
 .faq-wrap {
     width: 100%;
     overflow: hidden;
-    padding: 10em 1em 2em 1em;
+    padding: 10em 1em 4em 1em;
 }
 
 // ## Accordion 
@@ -117,7 +117,6 @@ header {
     width: 100%;
     text-align: left;
     border: none;
-    // transition: 0.4s;
 }
 
 .accordion-button:hover {
